@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "09126ad5-b09d-45c6-b4b5-824a8ee3a95a",
+		"name": "trafficDNATestTask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "topResultsByLevel",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/levelinfo/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"levelinfo",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "topResultsByUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/userinfo/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"userinfo",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "setUser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"result\": 11111,\n        \"user_id\": 4,\n        \"level_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/setinfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"setinfo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 @Service
 public class UserService {
 
-    public List<Map<String, Integer>> allUsers = new ArrayList<>() {{
+    public Set<Map<String, Integer>> allUsers = new HashSet<>() {{
         add(new HashMap<>() {{put("user_id", 1); put("level_id", 1); put("result", 11);}});
         add(new HashMap<>() {{put("user_id", 1); put("level_id", 2); put("result", 17);}});
         add(new HashMap<>() {{put("user_id", 1); put("level_id", 3); put("result", 33);}});
@@ -29,5 +29,4 @@ public class UserService {
                 .limit(20)
                 .collect(Collectors.toList());
     }
-
 }
